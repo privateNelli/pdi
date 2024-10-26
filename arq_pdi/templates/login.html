@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load static%}
+
+{% block content %}
+<div class="card    ">
+    <form class="form-signin" method="POST">
+        {% csrf_token %}
+        <h2 class="h2-signin">Iniciar sesión</h1>
+        {{form.as_p}}
+        <p class="error-mssg">{{error}}</p>
+        <button class="btn btn-warning">
+            Ingresar
+        </button>
+    </form>
+</div>
+
+{% endblock content %}
