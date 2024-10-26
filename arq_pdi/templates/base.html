@@ -14,7 +14,8 @@
         <a href="{% url "home" %}"> <h2>PDI</h2></a>
         {% if user.is_authenticated %}
         <h2>
-            <a href="{% url "logout" %}"><button class="btn btn-dark">Cerrar Sesión</button></a>
+            <a href="{% url "signout" %}"><button class="btn btn-dark">Cerrar Sesión</button></a>
+            <a href="{% url "casos" %}"><button class="btn btn-dark">Ingresar casos</button></a>
         </h2>
         {% else %}
         <h2>

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="h1cso">Ingreso de caso</h1>
+
+<div class="caso">
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <!-- <h4 class="h4cso">Tipo caso</h4>
+        <input class="form-control inpt" type="text" placeholder="Categoria caso" aria-label="default input example">
+        <br>
+        <h4 class="h4cso">Ubicación</h4>
+        <input class="form-control inpt" type="text" placeholder="" aria-label="default input example">
+        <br>
+        <h4 class="h4cso">Fono entrante</h4>
+        <input class="form-control inpt" type="text" placeholder="123456789" aria-label="default input example">
+        <br>
+        <h4 class="h4cso">Descripcion del caso</h4>
+        <textarea class="form-control inptlg" type="text" placeholder="" aria-label="default input example"></textarea>
+        <br> -->
+    </form>
+    <button class="btn btn-warning btncase"><input type="submit" value="Ingresar Caso"/></button>
+    
+</div>
+{% endblock content %}
+

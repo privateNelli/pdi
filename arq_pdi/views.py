@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
-from django.contrib.auth import login, logout, authenticate
+from django.contrib.auth import login as auth_login, logout, authenticate
 from django.db import IntegrityError
+from . models import Caso
+from . forms import CasoForm
 
 # Create your views here.
 
@@ -20,8 +22,8 @@ def login(request):
                 'error': 'Usuario o contraseña incorrectos'
             })
         else:
-            login(request, user)
-            return redirect('index')
+            auth_login(request, user)
+            return redirect('home')
 
 
 def home(request):
@@ -37,8 +39,8 @@ def signup(request):
             try:
                 user = User.objects.create_user(username=request.POST['username'],password=request.POST['password1'])
                 user.save()
-                login(request, user)
-                return redirect('index')
+                auth_login(request, user)
+                return redirect('home')
             except IntegrityError:
                 return render(request, 'signup.html', {
                     'form': UserCreationForm,
@@ -52,3 +54,19 @@ def signup(request):
 def signout(request):
     logout(request)
     return redirect('home')
+
+
+def caso(request):
+    if request.method == 'POST':
+        form = CasoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            # read the doc for `redirect` and change the destination to
+            # something that makes sense for your app.
+            # as to why we redirect, cf  https://en.wikipedia.org/wiki/Post/Redirect/Get
+            return redirect("/")
+
+    else:
+        # GET request, present an empty form
+        form = CasoForm() 
+    return render(request, 'ing_caso.html', {"form": form})

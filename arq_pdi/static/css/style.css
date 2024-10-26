@@ -113,8 +113,57 @@ form button{
     margin: auto;
 }
 
+.formsito{
+    width: 80%;
+    padding-bottom: 20px;
+    background-color: rgb(6, 6, 114);
+}
+
+.h1cso{
+    color: white;
+    font-size: 45px;
+    margin-left: 30px;
+    padding: 15px;
+    padding-top: 20px;    
+}
+.inpt{
+    width: 30%;
+    margin-left: 50px;
+}
+
+.h4cso{
+    font-size: 25px;
+    color: white;
+    margin-left: 45px;
+}
+.h5cso{
+    font-size: 18px;
+    color: white;
+    margin-left: 45px;
+
+}
+
+.inptlg{
+    height: 30%;
+    width: 30%;
+    margin-left: 50px;
+}
+
 .form-signup button{
     width: 40%;
+}
+
+.caso label{
+    color: white;
+    font-size: 20px;
+}
+
+.caso p{
+    margin-left: 50px;
+    text-align: left;
+}
+.btncase{
+    margin-left: 50px;    
 }
 
 p input{
