@@ -14,9 +14,23 @@ body{
     margin-right: 20px;
 }
 
-/* .right{
-    margin-right: 1px;
+.casoform{
+    width: 40%;
+    margin: auto;
+}
+
+.btncaso{
+    width: 20%;
+    margin-left: 775px;
+}
+
+/* .grupocaso{
+    
 } */
+
+tbody{
+    margin-left: 100px;
+}
 
 .head h2{
     color: white;
@@ -162,9 +176,7 @@ form button{
     margin-left: 50px;
     text-align: left;
 }
-.btncase{
-    margin-left: 50px;    
-}
+
 
 p input{
     width: 20%;

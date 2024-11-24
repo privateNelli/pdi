@@ -70,3 +70,18 @@ def caso(request):
         # GET request, present an empty form
         form = CasoForm() 
     return render(request, 'ing_caso.html', {"form": form})
+
+
+def regcaso(request):
+    tipo_caso = request.POST['tipocaso']
+    ubicacion = request.POST['ubi']
+    fono = request.POST['fono']
+    desc_caso = request.POST['desc_caso']
+
+    caso = Caso.objects.create(tipo_caso=tipo_caso, ubicacion=ubicacion, fono=fono, desc_caso=desc_caso)
+    return redirect('home')
+
+
+def dash(request):
+    casos = Caso.objects.all()
+    return render(request, "dashboard.html", {"caso": casos})
