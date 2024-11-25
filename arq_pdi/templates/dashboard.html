@@ -2,10 +2,12 @@
 
 {% block content %}
 
-<div class="col-sm-12 col-md-6 col-lg-8 col-xl-8">
+<br>
+<div class="col-sm-12 col-md-6 col-lg-8 col-xl-8 cent">
         
-    <h1>Listado de Pedidos</h1>
-    <div class="table-responsive py-2">
+    <h1 style="color: white; text-align:center;">Casos Igresados</h1>
+    <br>
+    <div class="table-responsive py-2 tabla">
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -18,7 +20,7 @@
                 </tr>
             </thead>
 
-            <tbod class="tr1"y>
+            <tbody class="tr1">
                 {% for c in caso %}
                 <tr>
                     <td>{{forloop.counter}} </td>
@@ -31,7 +33,7 @@
                     <td><a href="eliminarPedido/{{c.codigo}}" class="btn btn-danger btnEliminacion">Eliminar Caso</a></td> {% endcomment %}
                 </tr>
                 {% endfor %}
-            </tbod>
+            </tbody>
         </table>
     </div>
 

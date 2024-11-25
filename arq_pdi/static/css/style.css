@@ -28,8 +28,8 @@ body{
     
 } */
 
-tbody{
-    margin-left: 100px;
+table{
+    text-align: center;
 }
 
 .head h2{
@@ -40,6 +40,14 @@ tbody{
 .head .btn{
     margin-left: 20px;
 }
+
+.cent{
+    margin: auto;
+    width: 70%;
+    
+}
+
+
 
 .head .btn2{
     margin-left: 20px;
